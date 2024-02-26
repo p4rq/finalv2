@@ -7,7 +7,7 @@
     <meta property="og:title" content="Rick and Morty Quiz Result">
     <meta property="og:description" content="I just scored <%= score %> out of <%= totalQuestions %> in the Rick and Morty Quiz!">
     <meta property="og:image" content="https://your-quiz-image-url.com"> <!-- Замените на URL-адрес изображения для отображения при шаринге -->
-    <meta property="og:url" content="https://your-quiz-url.com/result?score=<%= score %>&totalQuestions=<%= totalQuestions %>">
+    <meta property="og:url" content="https://finalv2.onrender.com/quiz/submit?score=<%= score %>&totalQuestions=<%= totalQuestions %>">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
@@ -72,26 +72,25 @@
         <!-- Share buttons -->
         <div class="share-buttons">
             <!-- Facebook Share Button -->
-            <div class="fb-share-button" data-href="https://your-quiz-url.com" data-layout="button_count" data-size="small">
-                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyour-quiz-url.com%2F&amp;src=sdkpreparse">
+            <div class="fb-share-button" data-href="https://finalv2.onrender.com/quiz/submit" data-layout="button_count" data-size="small">
+                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffinalv2.onrender.com%2Fquiz%2Fsubmit&amp;src=sdkpreparse">
                     <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Share on Facebook"/>
                 </a>
             </div>
 
             <!-- Twitter Share Button -->
-            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fyour-quiz-url.com%2F&amp;text=I%20just%20scored%20<%= score %>%20out%20of%20<%= totalQuestions %>%20in%20the%20Rick%20and%20Morty%20Quiz!&amp;hashtags=RickAndMortyQuiz" data-size="large">
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ffinalv2.onrender.com%2Fquiz%2Fsubmit&amp;text=I%20just%20scored%20<%= score %>%20out%20of%20<%= totalQuestions %>%20in%20the%20Rick%20and%20Morty%20Quiz!&amp;hashtags=RickAndMortyQuiz" data-size="large">
                 <img src="https://img.icons8.com/ios-filled/50/000000/twitter-circled.png" alt="Tweet on Twitter"/>
             </a>
 
             <!-- Telegram Share Button -->
-            <a href="https://t.me/share/url?url=https%3A%2F%2Fyour-quiz-url.com%2Fresult%3Fscore%3D<%= score %>%26totalQuestions%3D<%= totalQuestions %>" target="_blank">
+            <a href="https://t.me/share/url?url=https%3A%2F%2Ffinalv2.onrender.com%2Fquiz%2Fsubmit%3Fscore%3D<%= score %>%26totalQuestions%3D<%= totalQuestions %>" target="_blank">
                 <img src="https://img.icons8.com/ios-filled/50/000000/telegram-app.png" alt="Share on Telegram"/>
             </a>
         </div>
 
         <!-- Back to Home Page button -->
         <a href="/" class="btn btn-primary back-home-button">Back to Home Page</a>
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
