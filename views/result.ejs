@@ -72,19 +72,17 @@
         <!-- Share buttons -->
         <div class="share-buttons">
             <!-- Facebook Share Button -->
-            <div class="fb-share-button" data-href="https://finalv2.onrender.com/quiz/submit" data-layout="button_count" data-size="small">
-                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffinalv2.onrender.com%2Fquiz%2Fsubmit&amp;src=sdkpreparse">
-                    <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Share on Facebook"/>
-                </a>
-            </div>
+            <a id="facebookShare" href="#" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Share on Facebook"/>
+            </a>
 
             <!-- Twitter Share Button -->
-            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ffinalv2.onrender.com%2Fquiz%2Fsubmit&amp;text=I%20just%20scored%20<%= score %>%20out%20of%20<%= totalQuestions %>%20in%20the%20Rick%20and%20Morty%20Quiz!&amp;hashtags=RickAndMortyQuiz" data-size="large">
+            <a id="twitterShare" href="#" target="_blank">
                 <img src="https://img.icons8.com/ios-filled/50/000000/twitter-circled.png" alt="Tweet on Twitter"/>
             </a>
 
             <!-- Telegram Share Button -->
-            <a href="https://t.me/share/url?url=https%3A%2F%2Ffinalv2.onrender.com%2Fquiz%2Fsubmit%3Fscore%3D<%= score %>%26totalQuestions%3D<%= totalQuestions %>" target="_blank">
+            <a id="telegramShare" href="#" target="_blank">
                 <img src="https://img.icons8.com/ios-filled/50/000000/telegram-app.png" alt="Share on Telegram"/>
             </a>
         </div>
@@ -96,5 +94,26 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const facebookShare = document.getElementById('facebookShare');
+            const twitterShare = document.getElementById('twitterShare');
+            const telegramShare = document.getElementById('telegramShare');
+
+            const score = '<%= score %>';
+            const totalQuestions = '<%= totalQuestions %>';            
+
+            // Генерация текста для рассылки
+            const shareText = `Я прошел тест и получил ${score} из ${totalQuestions} в Rick and Morty Quiz! Проверь себя: `;
+
+            // Генерация URL для рассылки
+            const shareUrl = `https://finalv2.onrender.com/quiz/`;
+
+            // Назначение ссылок
+            facebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`;
+            twitterShare.href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}&hashtags=RickAndMortyQuiz`;
+            telegramShare.href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`;
+        });
+    </script>
 </body>
 </html>
