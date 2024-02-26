@@ -6,19 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website Title</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        /* Add this CSS to change carousel control icon color to black */
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            background-color: #000; /* Black color */
-        }
-
-        /* Add this CSS to change the color of the control text to black */
-        .carousel-control-prev, .carousel-control-next {
-            color: #000; /* Black color */
-        }
-    </style>
 </head>
 <body>
 
@@ -80,19 +67,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const searchForm = document.getElementById('searchForm');
-        searchForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-            const langSelect = document.getElementById('langSelect');
-            const langValue = langSelect ? langSelect.value : 'en';
-            const searchInput = document.getElementById('searchInput');
-            const query = searchInput ? searchInput.value : '';
-            const url = `/api/rickandmorty/search?lang=${langValue}&query=${encodeURIComponent(query)}`;
-            window.location.href = url;
-        });
-    });
-</script>
+
 </body>
 </html>
