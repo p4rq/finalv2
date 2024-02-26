@@ -22,7 +22,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="<%= lang === 'en' ? '/' : '/?lang=ru' %>"><%= lang === 'en' ? 'Home' : 'Домой' %></a>
-        <a class="navbar-brand" href="/api/rickandmorty?lang=<%= lang %>">Rick and Morty</a>
+        <a class="navbar-brand" href="/api/rickandmorty?lang=<%= lang %>"><%= lang === 'en' ? 'Rick and Morty' : 'Рик и Морти' %></a>
         <a class="navbar-brand" href="/api/starwars?lang=<%= lang %>"><%= lang === 'en' ? 'Star Wars' : 'Звездные войны' %></a>
         <a class="navbar-brand" href="/quiz"><%= lang === 'en' ? 'Quiz' : 'Викторина' %></a>
 
