@@ -16,7 +16,7 @@ const itemSchema = new mongoose.Schema({
   descriptions: [translationSchema],
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
-  
+    deletedAt: { type: Date },
 });
 
 const Item = mongoose.model('Item', itemSchema);
