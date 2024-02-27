@@ -102,7 +102,7 @@ router.delete('/items/:id/delete', authenticationMiddleware, isAdmin, async (req
       res.status(500).send('Internal Server Error');
     }
   });
-router.put('/items/:id/edit', authenticationMiddleware, isAdmin, async (req, res) => {
+router.post('/items/:id/edit', authenticationMiddleware, isAdmin, async (req, res) => {
     try {
       const itemId = req.params.id;
       const { pictures, names, descriptions } = req.body;
